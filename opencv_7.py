@@ -1,10 +1,12 @@
 import cv2
 
+#pedestrian detection
+
 # Load the cascade
-face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+face_cascade = cv2.CascadeClassifier('pedestrian.xml')
 
 # To capture video from webcam. 
-cap = cv2.VideoCapture("video.mp4")
+cap = cv2.VideoCapture("video_1.mp4")
 # To use a video file as input 
 # cap = cv2.VideoCapture('filename.mp4')
 
@@ -14,7 +16,7 @@ while True:
     # Convert to grayscale
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     # Detect the faces
-    faces = face_cascade.detectMultiScale(gray, 1.13, 3)
+    faces = face_cascade.detectMultiScale(gray, 1.125, 1)
     # Draw the rectangle around each face
     for (x, y, w, h) in faces:
         cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
@@ -26,3 +28,5 @@ while True:
         break
 # Release the VideoCapture object
 cap.release()
+
+ 
