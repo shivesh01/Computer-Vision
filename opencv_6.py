@@ -1,5 +1,6 @@
 import cv2
 
+#Face detection
 # Load the cascade
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
