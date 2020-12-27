@@ -9,6 +9,8 @@ python = "^3.8"
 opencv-python = "^4.4.0"
 django-vitae = "^0.1.0"
 pandas = "^1.1.5"
+imageai = "^2.1.5"
+keras = "^2.4.3"
 
 [tool.poetry.dev-dependencies]
 
